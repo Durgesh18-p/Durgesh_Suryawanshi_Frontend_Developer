@@ -1,0 +1,12 @@
+.font-shojumaru {
+  font-family: 'Shojumaru', cursive;
+}
+
+.heading{
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color : '#FFFFFF'
+}
+
+.gradient {
+  background: linear-gradient(90deg, #ED0137 0%, #F05733 100%);
+}
