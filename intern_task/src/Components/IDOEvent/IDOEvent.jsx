@@ -4,7 +4,7 @@ import { GoDotFill } from "react-icons/go";
 
 const IDOEvent = () => {
   return (
-    <div className="bg-[#000000] w-[1512px] h-[1110px]">
+    <div className="bg-[#000000] w-[100vw] h-[180vh]">
       <img
         src={image}
         alt="background image"
