@@ -19,3 +19,13 @@
   background: linear-gradient(90deg, #030405 0%, #120101 100%);
 }
 
+.color_gradient {
+  background: linear-gradient(90deg, #FF002A 0%, #720005 100%);
+}
+
+.font_poppins{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
