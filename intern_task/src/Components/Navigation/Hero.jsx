@@ -1,5 +1,5 @@
-import hero from "../assets/Hero_image.png";
-import Navigation from "./Navigation/Navigation";
+import hero from "../../assets/Hero_image.png";
+import Navigation from "./Navigation";
 
 const Hero = () => {
   return (
@@ -15,15 +15,18 @@ const Hero = () => {
       />
       <div
         style={{
-          position: "fixed",
+          position: "absolute",
           top: "276px",
           left: "123px",
           height: "108px",
           width: "1262px",
           color: "#FBF6F6",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <p className="font-shojumaru text-4xl leading-10 text-center">
+        <p className="font-shojumaru text-4xl leading-10 text-center w-[900px]">
           Where Blockchain Heroes Thrive, Rescuing Dreams, Elevating Fortunes.
         </p>
       </div>
