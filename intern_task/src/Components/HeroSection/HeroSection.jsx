@@ -1,11 +1,10 @@
-import "../Navigation/Navigation.css";
 import { IoIosArrowDown } from "react-icons/io";
 import warrior from "../../assets/warrior.png";
 
 const HeroSection = () => {
   return (
     <div className="bg-[#191818] h-[70vh] flex justify-center items-center ">
-      <div className="w-[50%]">
+      <div className="w-[50%] absolute left-[250px]">
         <h1 className="text-[#ED0137] font-normal leading-[3.2725] font-shojumaru ">
           INTRODUCTION
         </h1>
@@ -22,11 +21,11 @@ const HeroSection = () => {
           Documents <IoIosArrowDown />
         </button>
       </div>
-      <div>
+      <div className="">
         <img
           src={warrior}
           alt="warrior"
-          className="w-[398px] h-[452px] absolute top-[570px] left-[863px]"
+          className="w-[398px] h-[452px] absolute top-[570px] left-[823px]"
         />
       </div>
     </div>

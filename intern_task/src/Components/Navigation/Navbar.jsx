@@ -1,4 +1,4 @@
-import "./Navigation.css";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
   return (
@@ -8,7 +8,10 @@ const Navbar = () => {
         <li>IDO</li>
         <li>Tokenomics</li>
         <li>Roadmap</li>
-        <li>Coming Soon</li>
+        <li className="flex gap-[3px]">
+          Coming Soon{" "}
+          <IoIosArrowDown className="absolute top-[13px] left-[460px]" />
+        </li>
       </ul>
 
       <button className="gradient w-[127px] h-[38px] absolute top-[1px] right-[-300px] rounded-[15.44px]">

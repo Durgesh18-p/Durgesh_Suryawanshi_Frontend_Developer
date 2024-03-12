@@ -8,16 +8,16 @@ const IDOEvent = () => {
       <img
         src={image}
         alt="background image"
-        className="w-[1512px] h-[1145px] absolute top-[1015px] overflow-hidden opacity-[15%]"
+        className="w-[100%] h-[1145px] absolute top-[1015px] overflow-hidden opacity-[15%]"
       />
       <div>
         <h1 className="font-shojumaru absolute w-[823px] h-[54px] top-[1070px] left-[230px] font-normal leading-[50.19px] text-[#ED0137] text-xl text-center">
           Participate in our IDO Event!
         </h1>
       </div>
-      <div className="w-[1000px]">
+      <div className="w-[100wh]">
         <div>
-          <p className="w-[539px] h-[111px] absolute top-[1180px] left-[80px] heading font-normal leading-[36.51px] align-center text-[#E6E3E3] text-center">
+          <p className="w-[539px] h-[111px] absolute top-[1180px] left-[80px] heading font-normal leading-[36.51px] align-center text-[#E6E3E3] text-center border-[#C4110C]">
             During our IDO event, you will gain early access to our <br />
             revolutionary ecosystem, designed to empower <br /> everyone to
             share wealth and achieve success.
@@ -25,7 +25,7 @@ const IDOEvent = () => {
           <p className="bg-[#ED0137] text-[#FFFFFF] absolute w-[244px] h-[70px] top-[1325px] left-[229px] rounded-[20px] z-1 font-normal font-shojumaru leading-[23.84px] flex justify-center items-center">
             Token Info
           </p>
-          <div className="w-[412px] h-[382px] absolute top-[1360.27px] left-[151px] rounded-[20px] border-[1.5px] border-gradient ">
+          <div className="w-[412px] h-[382px] absolute top-[1360.27px] left-[145px] rounded-[20px] border-[1.5px] border-gradient border-[#C4110C]">
             <p className="w-[176px] h-[40px] absolute top-[50.26px] left-[70px] heading font-normal leading-[20px] text-[#FFFFFF]">
               Total token <br /> supply
             </p>
@@ -75,9 +75,9 @@ const IDOEvent = () => {
             <input
               type="text"
               placeholder="Generate a unique referral link"
-              className="w-[467px] h-[48px] absolute top-[590px] left-[-48px] rounded-[20px] border-[1px] bg-transparent border-[#C4110C]-500 pl-[10px] heading"
+              className="w-[467px] h-[48px] absolute top-[590px] left-[-48px] rounded-[20px] border-[1px] bg-transparent border-[#C4110C] pl-[10px] heading"
             />
-            <button className="w-[100px] h-[44px] absolute top-[592px] left-[318px] bg-[#ED0137] text-[#ffffff] rounded-[20px]">
+            <button className="w-[100px] h-[44px] absolute top-[592px] left-[318px] bg-[#ED0137] text-[#ffffff] rounded-[20px] ">
               Generate
             </button>
             <FaCopy className="h-[34px] w-[34px] absolute top-[598px] left-[430px]  text-[#ED0137]" />
@@ -85,27 +85,27 @@ const IDOEvent = () => {
         </div>
         <div>
           <div
-            className="w-[200px] h-[50.86px] absolute top-[1200px] left-[900px] rounded-[3.23px] border-[0.86px] border-[#ED0137] flex justify-around items-center
+            className="w-[200px] h-[50.86px] absolute top-[1200px] left-[900px] rounded-[3.23px]  border-[#ED0137] flex justify-around items-center
           "
           >
-            <span className="mr-[3px]  text-[#FFFFFF] text-center  text-[30px] border-r-[0.86px] border-[#ED0137]">
+            <span className="pr-[3px]  text-[#FFFFFF] text-center  text-[30px] border-[0.86px] border-[#ED0137]">
               0
             </span>
-            <span className=" text-[#FFFFFF] text-center  mr-[3px] text-[30px] border-r-[0.86px] border-[#ED0137]">
+            <span className=" text-[#FFFFFF] text-center  pr-[3px] text-[30px] border-[0.86px] border-[#ED0137]">
               0
             </span>
             <div className="flex flex-col text-[#ED0137]">
               <GoDotFill />
               <GoDotFill />
             </div>
-            <span className=" text-[#FFFFFF] text-center  mr-[3px] text-[30px] border-r-[0.86px] border-[#ED0137]">
+            <span className=" text-[#FFFFFF] text-center  pr-[3px] text-[30px] border-[0.86px] border-l-[0.86px] border-[#ED0137] pl-[3px]">
               0
             </span>
-            <span className=" text-[#FFFFFF] text-center  mr-[3px] text-[30px]  ">
+            <span className=" text-[#FFFFFF] text-center  pr-[3px] text-[30px]  border-[0.86px] border-[#ED0137]">
               0
             </span>
           </div>
-          <div className="w-[460px] h-[738px] absolute top-[1225px] left-[760px] rounded-[20px] border-[1.5px] border-color-[#ED0137]">
+          <div className="w-[460px] h-[738px] absolute top-[1225px] left-[760px] rounded-[20px] border-[1.5px] border-[#ED0137]">
             <h1 className="font-shojumaru text-[20px] text-[#ED0137] absolute top-[50px] left-[170px] font-[700]  w-[150px] text-center leading-[63.56px]">
               PRESALE 1
             </h1>
@@ -126,7 +126,7 @@ const IDOEvent = () => {
               <input
                 type="text"
                 placeholder="Enter the amount (BNB)"
-                className="pr-[18px] pt-[5px] pb-[5px] pl-[5px] bg-transparent border-[1px] w-[370px] border-[#C4110C] rounded-[20px] h-[48px]"
+                className="pr-[18px] pt-[5px] pb-[5px] pl-[5px] bg-transparent border-[0.86px] w-[370px] border-[#C4110C] rounded-[20px] h-[48px]"
               />
               <input
                 type="text"
@@ -142,10 +142,10 @@ const IDOEvent = () => {
           </div>
         </div>
         <div>
-          <button className="gradient absolute top-[1870px] left-[880px] p-[14px,21px] rounded-[21.92px] w-[73.8px] h-[45px] text-[#ffffff]">
+          <button className="gradient absolute top-[1870px] left-[880px] p-[14px,21px] rounded-[21.92px] w-[73.8px] h-[45px] text-[#ffffff] heading">
             Buy
           </button>
-          <button className="gradient absolute top-[1870px] left-[980px] p-[14px,21px] rounded-[21.92px] w-[131.58px] h-[45px] text-[#ffffff]">
+          <button className="gradient absolute top-[1870px] left-[980px] p-[14px,21px] rounded-[21.92px] w-[131.58px] h-[45px] text-[#ffffff] heading">
             Claim Drop
           </button>
         </div>
