@@ -9,7 +9,7 @@ const Roadmap = () => {
         <h1 className="w-[282px] h-[52px] absolute top-[-70px] left-[500px] text-[35px] text-[#ED0137] font-shojumaru ">
           Road Map
         </h1>
-        <img src={frame4} alt="" className="mt-[50px]" />
+        <img src={frame4} alt="" className="mt-[50px] " />
       </div>
     </div>
   );

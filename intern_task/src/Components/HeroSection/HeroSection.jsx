@@ -25,7 +25,7 @@ const HeroSection = () => {
         <img
           src={warrior}
           alt="warrior"
-          className="w-[398px] h-[452px] absolute top-[570px] left-[823px]"
+          className="w-[398px] h-[452px] absolute top-[570px] left-[823px] animate-spin-slow"
         />
       </div>
     </div>

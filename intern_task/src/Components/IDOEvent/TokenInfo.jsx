@@ -1,6 +1,34 @@
 import { FaCopy } from "react-icons/fa";
+import { useState } from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const TokenInfo = () => {
+  const generateRandomString = (length) => {
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "";
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  };
+
+  const [referralLink, setReferralLink] = useState("");
+
+  const generateReferralLink = () => {
+    const randomString = generateRandomString(10); // Change the length as needed
+    setReferralLink(randomString);
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(referralLink);
+    setReferralLink("");
+    toast("Copied to clipboard!");
+  };
+
   return (
     <div>
       <p className="w-[539px] h-[111px] absolute top-[1180px] left-[80px] heading font-normal leading-[36.51px] align-center text-[#E6E3E3] text-center border-[#C4110C]">
@@ -61,13 +89,22 @@ const TokenInfo = () => {
         <input
           type="text"
           placeholder="Generate a unique referral link"
-          className="w-[467px] h-[48px] absolute top-[590px] left-[-48px] rounded-[20px] border-[1px] bg-transparent border-[#C4110C] pl-[10px] heading"
+          value={referralLink}
+          readOnly
+          className="w-[467px] h-[48px] absolute top-[590px] left-[-48px] rounded-[20px] border-[1px] bg-transparent border-[#C4110C] pl-[10px] heading text-[#ffffff]"
         />
-        <button className="w-[100px] h-[44px] absolute top-[592px] left-[318px] bg-[#ED0137] text-[#ffffff] rounded-[20px] ">
+        <button
+          className="w-[100px] h-[44px] absolute top-[592px] left-[318px] bg-[#ED0137] text-[#ffffff] rounded-[20px]"
+          onClick={generateReferralLink}
+        >
           Generate
         </button>
-        <FaCopy className="h-[34px] w-[34px] absolute top-[598px] left-[430px]  text-[#ED0137]" />
+        <FaCopy
+          className="h-[34px] w-[34px] absolute top-[598px] left-[430px]  text-[#ED0137] cursor-pointer"
+          onClick={copyToClipboard}
+        />
       </div>
+      <ToastContainer />
     </div>
   );
 };

@@ -27,5 +27,85 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.animated-text {
+  animation: scaleAnimation 2s ease-in-out forwards;
+  transform-origin: top left;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 5s linear 1;
+}
+
+@keyframes shine-grow {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: brightness(150%);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}
+
+.animate-shine-grow {
+  animation: shine-grow 2s ease-in-out infinite;
+}
+
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00) 1;
+    border-image-slice: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00) 1;
+    border-image-slice: 1;
+  }
+}
+
+.rotate-border {
+  animation: rotate-border 5s linear infinite;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red; /* Adjust color as needed */
+  border-radius: 50%;
+  pointer-events: none; /* Ensure the dot doesn't interfere with mouse events */
+  z-index: 9999; /* Ensure the dot appears on top of other elements */
+}
+
+
+
+
+
 
 
