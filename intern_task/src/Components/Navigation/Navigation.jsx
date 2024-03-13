@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import logo from "../../assets/Logo.png";
 
 import Navbar from "./Navbar";
 
-const Navigation = () => {
+const Navigation = ({ connectWallet }) => {
   return (
     <div>
       <div>
@@ -15,7 +16,7 @@ const Navigation = () => {
           Saviour
         </h1>
       </div>
-      <Navbar />
+      <Navbar connectWallet={connectWallet} />
       <div></div>
     </div>
   );

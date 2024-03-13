@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { IoIosArrowDown } from "react-icons/io";
 // import { GiHamburgerMenu } from "react-icons/gi";
 // import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ connectWallet }) => {
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // const toggleMenu = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
         <li>IDO</li>
         <li>Tokenomics</li>
         <li>Roadmap</li>
-        <li className="flex gap-[3px]">
+        <li>
           Coming Soon{" "}
           <IoIosArrowDown className="absolute top-[13px] left-[460px]" />
         </li>
@@ -42,7 +43,12 @@ const Navbar = () => {
         )}
       </div> */}
 
-      <button className="gradient w-[127px] h-[38px] absolute top-[1px] right-[-300px] rounded-[15.44px]">
+      <button
+        className="gradient w-[127px] h-[38px] absolute top-[1px] right-[-300px] rounded-[15.44px]"
+        onClick={() => {
+          connectWallet();
+        }}
+      >
         Connect Wallet
       </button>
     </nav>

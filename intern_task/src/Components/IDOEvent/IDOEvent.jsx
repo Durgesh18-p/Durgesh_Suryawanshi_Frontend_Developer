@@ -6,7 +6,7 @@ import TokenInfo from "./TokenInfo";
 
 const IDOEvent = () => {
   return (
-    <div className="bg-[#000000] w-[100vw] h-[180vh]">
+    <div className="bg-[#000000] w-[100vw] h-[180vh]" id="ido">
       <img
         src={image}
         alt="background image"

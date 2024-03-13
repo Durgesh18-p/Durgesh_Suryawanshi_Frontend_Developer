@@ -1,13 +1,25 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
+import { useState } from "react";
 
 const QnA = () => {
+  const [expand, setExpand] = useState(false);
+
+  const expandQna = () => {
+    setExpand(!expand);
+  };
+
   return (
     <div className="font-shojumaru">
-      <h1 className="text-[#ED0137] absolute top-[60px] left-[850px] text-[30px] ">
+      <h1 className="text-[#ED0137] absolute top-[50px] left-[885px] text-[30px] ">
         FAQ
       </h1>
-      <div className="w-[559px] h-[55px] absolute top-[120px] left-[650px]  text-[#ffffff] font-normal border-[1px] border-[#ED0137] rounded-[20px]">
+      <div
+        className="w-[559px] h-[55px] absolute top-[120px] left-[650px]  text-[#ffffff] font-normal border-[1px] border-[#ED0137] rounded-[20px]"
+        onClick={() => {
+          expandQna();
+        }}
+      >
         <span className="absolute top-[20px] left-[40px] leading-[23.84px]">
           1
         </span>

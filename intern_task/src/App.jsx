@@ -8,9 +8,13 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
+  const connectWallet = () => {
+    <w3m-button />;
+  };
+
   return (
     <div className="overflow-x-hidden">
-      <Hero></Hero>
+      <Hero connectWallet={connectWallet}></Hero>
       <HeroSection />
       <IDOEvent />
       <Tokenomics />
