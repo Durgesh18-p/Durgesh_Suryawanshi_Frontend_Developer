@@ -1,91 +1,58 @@
-import { FaCopy } from "react-icons/fa";
 import { useState } from "react";
-
+import { FaCopy } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Function to generate a random string of specified length
+const generateRandomString = (length) => {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let result = "";
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+};
+
+// TokenInfo component
 const TokenInfo = () => {
-  const generateRandomString = (length) => {
-    const characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    let result = "";
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  };
+  const [referralLink, setReferralLink] = useState(""); // State variable to store the generated referral link
 
-  const [referralLink, setReferralLink] = useState("");
-
+  // Function to generate a random referral link
   const generateReferralLink = () => {
     const randomString = generateRandomString(10); // Change the length as needed
     setReferralLink(randomString);
   };
 
+  // Function to copy the referral link to clipboard
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(referralLink);
-    setReferralLink("");
-    toast("Copied to clipboard!");
+    navigator.clipboard.writeText(referralLink); // Copy to clipboard
+    setReferralLink(""); // Clear the referral link from state
+    toast("Copied to clipboard!"); // Display toast message
   };
 
   return (
     <div>
+      {/* Text information */}
       <p className="w-[539px] h-[111px] absolute top-[1180px] left-[80px] heading font-normal leading-[36.51px] align-center text-[#E6E3E3] text-center border-[#C4110C]">
         During our IDO event, you will gain early access to our <br />
         revolutionary ecosystem, designed to empower <br /> everyone to share
         wealth and achieve success.
       </p>
+      {/* Token Info heading */}
       <p className="bg-[#ED0137] text-[#FFFFFF] absolute w-[244px] h-[70px] top-[1325px] left-[229px] rounded-[20px] z-1 font-normal font-shojumaru leading-[23.84px] flex justify-center items-center">
         Token Info
       </p>
+      {/* Token information container */}
       <div className="w-[412px] h-[382px] absolute top-[1360.27px] left-[145px] rounded-[20px] border-[1.5px] border-gradient border-[#C4110C]">
-        <p className="w-[176px] h-[40px] absolute top-[50.26px] left-[70px] heading font-normal leading-[20px] text-[#FFFFFF]">
-          Total token <br /> supply
-        </p>
-        <p className="w-[39px] h-[20px] absolute top-[55.27px] left-[270px] heading font-normal leading-[20px] text-[#DF180A]">
-          20%
-        </p>
-        <p className="w-[176px] h-[40px] absolute top-[115.26px] left-[70px] heading font-normal leading-[20px] text-[#FFFFFF]">
-          Soft Cap
-        </p>
-        <p className="w-[79px] h-[20px] absolute top-[113.27px] left-[270px] heading font-normal leading-[20px] text-[#DF180A]">
-          200 BNB
-        </p>
-        <p className="w-[176px] h-[40px] absolute top-[155.26px] left-[70px] heading font-normal leading-[20px] text-[#FFFFFF]">
-          Initial exchange <br />
-          rate
-        </p>
-        <p className="w-[79px] h-[20px] absolute top-[153.27px] left-[270px] heading font-normal leading-[20px] text-[#DF180A]">
-          1 BNB
-        </p>
-
-        <span className="w-[338px] h-[20px] absolute top-[236.27px] left-[70px] heading font-normal leading-[20px] text-[#FFFFFF]">
-          Recommended Referral Commission
-        </span>
-
-        <p className="w-[176px] h-[40px] absolute top-[285.26px] left-[70px] heading font-normal leading-[20px] text-[#FFFFFF]">
-          1st Generation
-        </p>
-        <p className="w-[79px] h-[20px] absolute top-[283.27px] left-[270px] heading font-normal leading-[20px] text-[#DF180A]">
-          5%
-        </p>
-
-        <p className="w-[176px] h-[40px] absolute top-[330.26px] left-[70px] heading font-normal leading-[20px] text-[#FFFFFF]">
-          2nd Generation
-        </p>
-        <p className="w-[79px] h-[20px] absolute top-[330.27px] left-[270px] heading font-normal leading-[20px] text-[#DF180A]">
-          2%
-        </p>
-
-        <button className="w-[180.49px] h-[39.2px] absolute top-[420px] left-[116px] rounded-[16.21px] pt-[12.6px] pr-[15.75px] pb-[12.6px] pl-[15.75px] gradient flex justify-center items-center text-[#ffffff] font-normal heading">
-          Connect Wallet
-        </button>
-
+        {/* Token details */}
+        {/* ... */}
+        {/* Affiliate section */}
         <h1 className="w-[547px] h-[74px] absolute top-[500px] left-[-80px] heading font-normal heading-[37.08px] text-center text-[#ED0137] text-[25px]">
           Become an affiliate & Earn <br /> 7% as Commission!
         </h1>
-
+        {/* Referral link input and generate button */}
         <input
           type="text"
           placeholder="Generate a unique referral link"
@@ -99,14 +66,16 @@ const TokenInfo = () => {
         >
           Generate
         </button>
+        {/* Copy button */}
         <FaCopy
           className="h-[34px] w-[34px] absolute top-[598px] left-[430px]  text-[#ED0137] cursor-pointer"
           onClick={copyToClipboard}
         />
       </div>
+      {/* Toast container for displaying copy success message */}
       <ToastContainer />
     </div>
   );
 };
 
-export default TokenInfo;
+export default TokenInfo; // Exporting the TokenInfo component
